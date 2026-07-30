@@ -6,7 +6,7 @@ startBtn.addEventListener("click", () => {
     if (password === "120726") {
         document.querySelector(".container").innerHTML = `
             <h1>Vgood lol</h1>
-            <p> Keela Varum Paaru lol (Again sowwie for the length) </p>
+            <p> Keela Varum Paaru lol (Again sowwie for the length) p.s vid varla'na then click the thingy that says open the doc directly hehe </p>
 
             <iframe
                 width="100%"
