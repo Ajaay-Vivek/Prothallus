@@ -1,0 +1,10 @@
+<body>
+    <div class="container">
+        <h1>🎬 Secret Video</h1>
+        <p>Only those who complete the challenge can watch this video.</p>
+
+        <button id="startBtn">Start</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
