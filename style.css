@@ -4,128 +4,176 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: "Segoe UI", Arial, sans-serif;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    color:white;
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #ffffff;
+    position: relative;
 }
 
-/* Animated Background */
+/* Elegant animated background */
 
-.background{
-    position:fixed;
-    width:100%;
-    height:100%;
+.background {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #7b5cff,
+        #8f7fff,
+        #7ec8ff
+    );
+    background-size: 250% 250%;
+    animation: gradientMove 15s ease infinite;
+    z-index: -2;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Soft glow */
+
+.background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     background:
-    linear-gradient(-45deg,
-    #667eea,
-    #764ba2,
-    #ff6ec4,
-    #42e695);
-
-    background-size:400% 400%;
-
-    animation:gradient 12s ease infinite;
-
-    z-index:-2;
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.18), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,.12), transparent 35%);
 }
 
-@keyframes gradient{
+/* Main card */
 
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+.container {
 
-}
+    width: 90%;
+    max-width: 720px;
 
-/* Glass Card */
+    padding: 60px 55px;
 
-.container{
+    text-align: center;
 
-    width:90%;
-    max-width:700px;
+    background: rgba(255,255,255,.14);
 
-    text-align:center;
+    backdrop-filter: blur(16px);
 
-    background:rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.20);
 
-    backdrop-filter:blur(20px);
-
-    border-radius:25px;
-
-    padding:60px;
+    border-radius: 28px;
 
     box-shadow:
-    0 20px 60px rgba(0,0,0,.35);
-
-    border:1px solid rgba(255,255,255,.25);
+        0 20px 45px rgba(0,0,0,.18);
 
 }
 
 /* Heading */
 
-h1{
+h1 {
 
-font-size:3rem;
+    font-size: clamp(2.2rem, 4vw, 3.3rem);
 
-line-height:1.3;
+    font-weight: 700;
 
-margin-bottom:20px;
+    line-height: 1.25;
 
-font-weight:700;
+    margin-bottom: 18px;
+
+    letter-spacing: -.5px;
 
 }
 
 /* Subtitle */
 
-.subtitle{
+.subtitle {
 
-font-size:1.25rem;
+    font-size: 1.1rem;
 
-opacity:.9;
+    color: rgba(255,255,255,.88);
 
-margin-bottom:40px;
+    line-height: 1.7;
+
+    margin-bottom: 45px;
 
 }
 
 /* Button */
 
-button{
+button {
 
-padding:18px 40px;
+    background: white;
 
-font-size:1.15rem;
+    color: #5b5ce2;
 
-font-weight:600;
+    border: none;
 
-border:none;
+    padding: 16px 36px;
 
-border-radius:50px;
+    font-size: 1rem;
 
-cursor:pointer;
+    font-weight: 600;
 
-background:white;
+    border-radius: 999px;
 
-color:#6b21a8;
+    cursor: pointer;
 
-transition:.3s;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
 
-}
-
-button:hover{
-
-transform:translateY(-5px) scale(1.05);
-
-box-shadow:0 15px 35px rgba(0,0,0,.3);
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
 
 }
 
-button:active{
+button:hover {
 
-transform:scale(.98);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.22);
+
+}
+
+button:active {
+
+    transform: scale(.98);
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        padding: 45px 28px;
+
+    }
+
+    h1 {
+
+        font-size: 2rem;
+
+    }
+
+    .subtitle {
+
+        font-size: 1rem;
+
+    }
 
 }
