@@ -1,10 +1,131 @@
-<body>
-    <div class="container">
-        <h1>🎬 Secret Video</h1>
-        <p>Only those who complete the challenge can watch this video.</p>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <button id="startBtn">Start</button>
-    </div>
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:white;
+}
 
-    <script src="script.js"></script>
-</body>
+/* Animated Background */
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(-45deg,
+    #667eea,
+    #764ba2,
+    #ff6ec4,
+    #42e695);
+
+    background-size:400% 400%;
+
+    animation:gradient 12s ease infinite;
+
+    z-index:-2;
+}
+
+@keyframes gradient{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* Glass Card */
+
+.container{
+
+    width:90%;
+    max-width:700px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:60px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.35);
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+/* Heading */
+
+h1{
+
+font-size:3rem;
+
+line-height:1.3;
+
+margin-bottom:20px;
+
+font-weight:700;
+
+}
+
+/* Subtitle */
+
+.subtitle{
+
+font-size:1.25rem;
+
+opacity:.9;
+
+margin-bottom:40px;
+
+}
+
+/* Button */
+
+button{
+
+padding:18px 40px;
+
+font-size:1.15rem;
+
+font-weight:600;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:white;
+
+color:#6b21a8;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-5px) scale(1.05);
+
+box-shadow:0 15px 35px rgba(0,0,0,.3);
+
+}
+
+button:active{
+
+transform:scale(.98);
+
+}
