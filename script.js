@@ -5,8 +5,8 @@ startBtn.addEventListener("click", () => {
 
     if (password === "120726") {
         document.querySelector(".container").innerHTML = `
-            <h1>🎉 Access Granted!</h1>
-            <p>Welcome! Your video will appear below.</p>
+            <h1>Supereyy</h1>
+            <p> Keela Varum Paaru lol (Again sowwie for the length) </p>
 
             <iframe
                 width="100%"
