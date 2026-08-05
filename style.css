@@ -318,3 +318,84 @@ iframe{
     }
 
 }
+/* ---------- Password Modal ---------- */
+
+.modal-overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.modal{
+
+    width:90%;
+    max-width:420px;
+
+    background:#181818;
+
+    border:1px solid #2d2d2d;
+
+    border-radius:18px;
+
+    padding:35px;
+
+}
+
+.modal h2{
+
+    margin-bottom:10px;
+
+}
+
+.modal p{
+
+    color:#bdbdbd;
+
+    margin-bottom:20px;
+
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:10px;
+
+}
+
+#cancelBtn{
+
+    background:transparent;
+
+    color:white;
+
+    border:1px solid #3a3a3a;
+
+}
+
+#cancelBtn:hover{
+
+    background:#222;
+
+}
+
+#modalError{
+
+    color:#ff6b6b;
+
+    margin-bottom:15px;
+
+    min-height:20px;
+
+}
